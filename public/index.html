@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#396a48"><meta name="description" content="ارائهٔ تعاملی فارسی دربارهٔ تکنولوژی در آموزش؛ از چاپ و PLATO تا یادگیری آنلاین و هوش مصنوعی.">
+ <title>تکنولوژی در آموزش</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='24' fill='%23396a48'/%3E%3Cpath d='M12 18h14a6 6 0 0 1 6 6v28a8 8 0 0 0-8-6H12zm40 0H38a6 6 0 0 0-6 6v28a8 8 0 0 1 8-6h12z' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+ <link rel="preload" href="./assets/Vazirmatn.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="./style.css">
+ <script src="./app.js" defer></script>
+</head>
+<body>
+ <a class="skip" href="#slide">رفتن به اسلاید</a>
+ <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+ <header class="welcome-top"><span class="welcome-wordmark">تکنولوژی در آموزش</span><div class="welcome-tools"><button class="icon-button" data-action="settings" aria-label="تنظیمات ظاهر"><span data-icon="settings"></span></button><button class="icon-button" data-action="fullscreen" aria-label="تمام‌صفحه"><span data-icon="fullscreen"></span></button></div></header>
+ <main class="welcome-main"><div class="welcome-copy"><span class="eyebrow">شروع ارائه</span><h1 id="welcome-title" style="view-transition-name: slide-title">سلام،<br>خوش آمدید.</h1><p class="welcome-intro">امروز از تغییراتی حرف می‌زنیم که فناوری<br>در یاد دادن و یاد گرفتن به وجود آورده است.</p><button class="filled large" id="enter-deck" data-action="enter">ورود به ارائه <span data-icon="left"></span></button><div class="welcome-meta"><span>تکنولوژی در آموزش</span><span>از گذشته تا امروز</span></div></div><div class="welcome-visual" style="view-transition-name: feature"><div class="welcome-photo"><img src="./assets/classroom.jpg" alt="کتاب و ابزارهای یادگیری روی میز" width="1400" height="934"></div><div class="welcome-caption"><span data-icon="book"></span><div><span>یک پرسش برای شروع</span><strong>آخرین چیزی که با کمک فناوری<br>یاد گرفتید چه بود؟</strong></div></div></div></main>
+ <footer class="welcome-footer"><span>ارائهٔ کلاسی</span><span>۰ / شروع</span></footer>
+ </section>
+ <div class="app" id="deck-app" hidden>
+  <aside class="rail" aria-label="بخش‌های ارائه">
+   <button class="brand" data-action="welcome" aria-label="بازگشت به صفحهٔ شروع" title="صفحهٔ شروع"><span data-icon="book"></span></button>
+   <nav class="rail-nav">
+    <button class="rail-button" data-section="آغاز" aria-pressed="true"><span class="rail-icon" data-icon="spark"></span><span>آغاز</span></button>
+    <button class="rail-button" data-section="گذشته" aria-pressed="false"><span class="rail-icon" data-icon="radio"></span><span>گذشته</span></button>
+    <button class="rail-button" data-section="کاربردها" aria-pressed="false"><span class="rail-icon" data-icon="computer"></span><span>کاربردها</span></button>
+    <button class="rail-button" data-section="مسئولیت" aria-pressed="false"><span class="rail-icon" data-icon="eye"></span><span>مسئولیت</span></button>
+    <button class="rail-button" data-section="فیلم و جمع‌بندی" aria-pressed="false"><span class="rail-icon" data-icon="play"></span><span>جمع‌بندی</span></button>
+   </nav>
+   <button class="rail-button rail-bottom" data-action="help" title="راهنمای کنترل"><span class="rail-icon" data-icon="check"></span><span>راهنما</span></button>
+  </aside>
+  <main class="workspace">
+   <header class="topbar"><div class="top-title"><strong>تکنولوژی در آموزش</strong><span class="separator"></span><span id="section-name">آغاز</span></div><div class="toolbar">
+    <button class="icon-button" data-action="overview" aria-label="نقشهٔ اسلایدها" title="نقشهٔ اسلایدها (O)"><span data-icon="grid"></span></button>
+    <button class="tonal-button" data-action="notes" aria-label="یادداشت ارائه‌دهنده" title="یادداشت‌ها (N)"><span data-icon="notes"></span><span>یادداشت‌ها</span></button>
+    <button class="icon-button" data-action="settings" aria-label="تنظیمات رنگ، روشنایی و حرکت" title="تنظیمات ظاهر"><span data-icon="settings"></span></button>
+    <button class="icon-button" data-action="fullscreen" aria-label="تمام‌صفحه" title="تمام‌صفحه (F)"><span data-icon="fullscreen"></span></button>
+   </div></header>
+   <section class="stage" aria-label="اسلاید ارائه"><div class="slide" id="slide" tabindex="-1"></div></section>
+   <footer class="bottom-bar">
+    <button class="source-button" data-action="sources" aria-label="منابع اسلاید کنونی"><span data-icon="link"></span><span>منابع اسلاید</span></button>
+    <div class="controls" aria-label="کنترل اسلاید"><button class="nav-button" id="prev" data-action="prev" aria-label="اسلاید قبلی" title="قبلی (→)"><span data-icon="right"></span></button><span class="counter" id="counter">۱ / ۱۶</span><button class="nav-button next" id="next" data-action="next" aria-label="اسلاید بعدی" title="بعدی (←)"><span data-icon="left"></span></button></div>
+    <div class="time"><span></span><span id="time">۱ دقیقه</span></div>
+    <div class="progress-track" aria-hidden="true"><div class="progress" id="progress"></div></div>
+   </footer>
+  </main>
+ </div>
+ <dialog id="modal" aria-labelledby="modal-title"><header class="modal-header"><h2 id="modal-title"></h2><button class="icon-button" data-action="close" aria-label="بستن پنجره"><span data-icon="close"></span></button></header><div id="modal-body"></div></dialog>
+ <div id="status" class="sr-only" aria-live="polite" aria-atomic="true"></div><span id="slide-name" hidden></span>
+ <noscript><p style="padding:32px">برای اجرای ارائه، JavaScript را فعال کنید. متن کامل اسلایدها در فایل راهنمای محتوا همراه پروژه قرار دارد.</p></noscript>
+</body>
+</html>

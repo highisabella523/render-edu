@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: technology-in-education
+    runtime: static
+    staticPublishPath: ./public
+    buildCommand: npm ci && npm run build
+    autoDeploy: true
+    headers:
+      - path: /*
+        headers:
+          - key: X-Content-Type-Options
+            value: nosniff
+          - key: Referrer-Policy
+            value: strict-origin-when-cross-origin
+          - key: Permissions-Policy
+            value: camera=(), microphone=(), geolocation=()
+      - path: /assets/*
+        headers:
+          - key: Cache-Control
+            value: public, max-age=86400

@@ -1,0 +1,22 @@
+{
+  "name": "technology-in-education",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Persian Material 3 Expressive web presentation, ready for Vercel",
+  "scripts": {
+    "build": "tsc --noEmit && node build.mjs",
+    "dev": "node dev.mjs",
+    "preview": "node dev.mjs"
+  },
+  "dependencies": {
+    "@material/material-color-utilities": "0.4.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
